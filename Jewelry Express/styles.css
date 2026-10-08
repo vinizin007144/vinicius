@@ -1,0 +1,251 @@
+ /* ===== RESET E ESTILOS GERAIS ===== */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #f5f5f5;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #478a45, #b8860b);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.8em;
+    color: #1a1a1a;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #333;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #4e4d4d;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(26, 26, 26, 0.5);
+}
+
+h2 {
+    color: #cec43b;
+    border-bottom: 2px solid #c9c425;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+/* ===== FORMULÁRIO DE CADASTRO ===== */
+.form-cadastro {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 25px;
+    align-items: end;
+}
+
+.form-cadastro label {
+    display: block;
+    font-size: 0.85em;
+    color: #d4af37;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-cadastro input,
+.form-cadastro select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    font-size: 0.95em;
+}
+
+.form-cadastro input:focus,
+.form-cadastro select:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* ===== BOTÕES ===== */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.btn-adicionar {
+    background: linear-gradient(135deg, #d4af37, #b8860b);
+    color: #1a1a1a;
+    height: 42px;
+}
+
+.btn-adicionar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+.btn-remover {
+    background: #c0392b;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85em;
+}
+
+.btn-remover:hover {
+    background: #e74c3c;
+}
+
+.btn-limpar {
+    background: #555;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-limpar:hover {
+    background: #777;
+}
+
+.btn-imprimir {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: white;
+}
+
+.btn-imprimir:hover {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+/* ===== TABELA DE ITENS ===== */
+.tabela-itens {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.tabela-itens th {
+    background: #d4af37;
+    color: #1a1a1a;
+    padding: 12px;
+    text-align: left;
+    font-family: 'Georgia', serif;
+}
+
+.tabela-itens td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    color: #f5f5f5;
+}
+
+.tabela-itens tr:hover {
+    background: #333;
+}
+
+.vazio {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-style: italic;
+}
+
+/* ===== RESUMO DO ORÇAMENTO ===== */
+.resumo {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #d4af37;
+}
+
+.desconto-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.desconto-container label {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.desconto-container input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #262626;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 1.1em;
+}
+
+.linha-resumo.total {
+    border-top: 2px solid #d4af37;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.acoes {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .form-cadastro {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* ===== IMPRESSÃO ===== */
+@media print {
+    body { background: white; color: black; }
+    .form-cadastro, .acoes, .btn-remover { display: none; }
+    header { background: none; color: black; box-shadow: none; }
+    header h1 { color: #b8860b; }
+    .container { box-shadow: none; background: white; }
+    h2 { color: #b8860b; border-color: #b8860b; }
+    .tabela-itens th { background: #b8860b; color: white; }
+    .tabela-itens td { color: black; border-color: #ccc; }
+    .resumo { background: #f5f5f5; border-color: #b8860b; }
+    .linha-resumo { color: black; }
+    .linha-resumo.total { color: #b8860b; }
+}

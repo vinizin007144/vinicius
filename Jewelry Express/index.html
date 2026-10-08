@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Express</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>💎 Jewelry Express</h1>
+        <p>Elegância e qualidade em cada detalhe</p>
+    </header>
+
+    <div class="container">
+        <!-- CADASTRO DE ITEM -->
+        <h2>➕ Cadastrar Item</h2>
+        <div class="form-cadastro">
+            <div>
+                <label for="nomeItem">Descrição do item</label>
+                <input type="text" id="nomeItem" placeholder="Ex: Anel de ouro 18k">
+            </div>
+            <div>
+                <label for="tipoItem">Tipo</label>
+                <select id="tipoItem">
+                    <option value="Produto">Produto</option>
+                    <option value="Serviço">Serviço</option>
+                </select>
+            </div>
+            <div>
+                <label for="qtdItem">Quantidade</label>
+                <input type="number" id="qtdItem" min="1" value="1">
+            </div>
+            <div>
+                <label for="valorItem">Valor unitário (R$)</label>
+                <input type="number" id="valorItem" min="0" step="0.01" placeholder="0,00">
+            </div>
+            <button class="btn-adicionar" onclick="adicionarItem()">Adicionar</button>
+        </div>
+
+        <!-- LISTA DE ITENS -->
+        <h2>📋 Itens do Orçamento</h2>
+        <table class="tabela-itens">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th>Qtd.</th>
+                    <th>Valor Unit.</th>
+                    <th>Subtotal</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
+                <tr>
+                    <td colspan="7" class="vazio">Nenhum item cadastrado ainda.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- RESUMO E DESCONTO -->
+        <h2>💰 Resumo do Orçamento</h2>
+        <div class="resumo">
+            <div class="desconto-container">
+                <label for="desconto">Desconto (%):</label>
+                <input type="number" id="desconto" min="0" max="100" value="0" step="0.01" oninput="atualizarResumo()">
+            </div>
+
+            <div class="linha-resumo">
+                <span>Subtotal:</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+            <div class="linha-resumo">
+                <span>Desconto:</span>
+                <span id="valorDesconto">- R$ 0,00</span>
+            </div>
+            <div class="linha-resumo total">
+                <span>TOTAL:</span>
+                <span id="total">R$ 0,00</span>
+            </div>
+
+            <div class="acoes">
+                <button class="btn-limpar" onclick="limparTudo()">🗑️ Limpar Tudo</button>
+                <button class="btn-imprimir" onclick="window.print()">🖨️ Imprimir Orçamento</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
